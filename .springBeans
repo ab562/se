@@ -9,6 +9,7 @@
 	<configs>
 		<config>src/main/resources/spring/beans.xml</config>
 		<config>src/main/resources/spring/bean-server.xml</config>
+		<config>src/main/resources/spring/bean-web.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
