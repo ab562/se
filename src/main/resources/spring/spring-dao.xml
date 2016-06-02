@@ -32,7 +32,7 @@
 		<!-- 加载mybatis的全局配置文件 -->
 		<property name="configLocation" value="classpath:mybatis-config.xml" />
 		<property name="typeAliasesPackage" value="org.seckill.entity"/>
-		<property name="mapperLocations" value="mapper/*.xml"/>
+		<property name="mapperLocations" value="classpath:mapper/*.xml"/>
 	</bean>
 	<!-- mapper扫描器 -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">

@@ -19,8 +19,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({"classpath:spring/beans.xml",
-	"classpath:spring/bean-server.xml"})
+@ContextConfiguration({"classpath:spring/spring-dao.xml",
+	"classpath:spring/spring-server.xml"})
 public class SeckillServiceTest {
 	private Logger logger =  LoggerFactory.getLogger(this.getClass());
 	@Resource

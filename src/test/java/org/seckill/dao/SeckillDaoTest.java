@@ -13,7 +13,7 @@ import org.seckill.entity.Seckill;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({"classpath:spring/beans.xml"})
+@ContextConfiguration({"classpath:spring/spring-dao.xml"})
 public class SeckillDaoTest {
 	@Resource
 	private SeckillDao seckillDao;

@@ -3,6 +3,8 @@ package org.seckill.service.impl;
 import java.util.Date;
 import java.util.List;
 
+import javax.annotation.Resource;
+
 import org.junit.experimental.theories.Theories;
 import org.seckill.dao.SeckillDao;
 import org.seckill.dao.SuccessKilledDao;
@@ -27,7 +29,7 @@ import org.springframework.util.StringUtils;
 public class SeckillServiceImpl implements SeckillService{
 	private Logger logger =  LoggerFactory.getLogger(this.getClass());
 	private final  String  slat="ddfsdf";
-	@Autowired
+	@Resource
 	private SeckillDao seckillDao;
 	@Autowired
 	private SuccessKilledDao successKilledDao;

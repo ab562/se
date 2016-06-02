@@ -10,7 +10,7 @@ import org.seckill.entity.SuccessKilled;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({"classpath:spring/beans.xml"})
+@ContextConfiguration({"classpath:spring/spring-dao.xml"})
 public class SuccessKilledDaoTest {
 	@Resource
 	private SuccessKilledDao successKilledDao;

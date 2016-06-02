@@ -1,6 +1,9 @@
 package org.seckill.web;
 
+import java.util.Date;
 import java.util.List;
+
+import javax.annotation.Resource;
 
 import org.seckill.dto.Exposer;
 import org.seckill.dto.SeckillExecution;
@@ -26,9 +29,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/seckill")
 public class SeckillController {
 	private Logger logger =  LoggerFactory.getLogger(this.getClass());
-	@Autowired
+	@Resource
 	private SeckillService seckillService;
-	@RequestMapping(name="/list",method=RequestMethod.GET)
+	@RequestMapping(value="/list",method=RequestMethod.GET)
 	public String list(Model model){
 	List<Seckill> list = seckillService.getSeckillList();
 		model.addAttribute("list", list);
@@ -50,7 +53,7 @@ public class SeckillController {
 	@RequestMapping(value="/{seckillId}/exposer" ,method=RequestMethod.POST
 			,produces={"application/json;charset=utf-8"})
 	@ResponseBody
-	public SeckillResult<Exposer> exporter(Long seckillId){
+	public SeckillResult<Exposer> exporter(@PathVariable("seckillId")Long seckillId){
 		 SeckillResult<Exposer> seckillResult;
 		try {
 			Exposer exposer =seckillService.exportSeckillUrl(seckillId);
@@ -84,4 +87,10 @@ public class SeckillController {
 		        return new   SeckillResult<>(false,seckillExecution);
 	     }
 	}
+	 @RequestMapping(value = "/time/now", method = RequestMethod.GET)
+	    @ResponseBody
+	    public SeckillResult<Long> time() {
+	        Date now = new Date();
+	        return new SeckillResult(true, now.getTime());
+	    }
 }
