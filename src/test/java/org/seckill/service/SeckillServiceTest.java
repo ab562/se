@@ -30,7 +30,17 @@ public class SeckillServiceTest {
 		List<Seckill> list = seckillService.getSeckillList();
 		logger.info("list={}",list);
 	}
-
+	@Test
+	public void executeSeckillProcedureTest(){
+		Exposer es = seckillService.exportSeckillUrl(1);
+		String md5=null ;
+		if(es.isExposed()){
+			md5=es.getMd5();
+			
+			SeckillExecution ex = seckillService.executeSeckillProcedure(1, 13344433434l, md5);
+		}
+		
+	}
 	@Test
 	public void testGetById() {
 		Seckill s = seckillService.getById(1);
@@ -56,4 +66,8 @@ public class SeckillServiceTest {
 		} 
 	}
 
+@Test
+public void testName() throws Exception {
+	System.out.println(2/3);
+}
 }

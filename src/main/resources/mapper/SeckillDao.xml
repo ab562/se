@@ -18,7 +18,13 @@
 	,s.start_time ,s.end_time,s.create_time
 	from seckill s order by s.create_time desc
 	limit #{offset},#{limit}
-	
-		
+	</select>
+	<select id="killProcedure" statementType="CALLABLE">
+	call execute_seckill(
+	#{seckillId,jdbcType=BIGINT,mode =IN},
+	#{phone,jdbcType=BIGINT,mode =IN},
+	#{killTime,jdbcType=TIMESTAMP,mode =IN},
+	#{r_result,jdbcType=INTEGER,mode =OUT}
+	)
 	</select>
 </mapper>

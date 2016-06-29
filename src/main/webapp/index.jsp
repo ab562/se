@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>xxss</h1>
+<h1><a href="/se/seckill/list">秒杀商品列表</a></h1>
 </body>
 </html>
