@@ -8,5 +8,9 @@
 </head>
 <body>
 <h1><a href="/se/seckill/list">秒杀商品列表</a></h1>
+<form action="${pageContext.request.contextPath }/test/save">
+aa<input id="name" name="name" value="name" type="text">
+<input id="" name="" value="sub" type="submit">
+</form>
 </body>
 </html>

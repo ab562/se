@@ -39,6 +39,7 @@ public class SeckillServiceImpl implements SeckillService {
 	private SuccessKilledDao successKilledDao;
 	@Resource
 	private RedisDao redisDao;
+	
 
 	public List<Seckill> getSeckillList() {
 		return seckillDao.queryAll(0, 4);
