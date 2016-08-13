@@ -1,18 +1,3 @@
-/*
-Navicat MySQL Data Transfer
-
-Source Server         : my
-Source Server Version : 50624
-Source Host           : localhost:3306
-Source Database       : seckill
-
-Target Server Type    : MYSQL
-Target Server Version : 50624
-File Encoding         : 65001
-
-Date: 2016-05-24 11:04:20
-*/
-
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
@@ -23,9 +8,9 @@ CREATE TABLE `seckill` (
   `seckill_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `name` varchar(500) DEFAULT NULL,
   `number` int(11) DEFAULT NULL,
-  `start_time` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  `end_time` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `start_time` date,
+  `end_time` date,
+  `create_time` date,
   PRIMARY KEY (`seckill_id`),
   KEY `idx1` (`start_time`),
   KEY `idx2` (`end_time`),

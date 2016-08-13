@@ -1,6 +1,6 @@
 
 CREATE  PROCEDURE `seckill`.`execute_seckill`
-(in v_seckill_id bigint ,in v_phone bigint,in v_kill_time timestamp,out r_result int)
+(in v_seckill_id bigint ,in v_phone bigint,in v_kill_time date,out r_result int)
 BEGIN
 	declare insert_count int DEFAULT 0;
 	start TRANSACTION;
